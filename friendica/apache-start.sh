@@ -2,7 +2,7 @@
 set -eu
 cd /var/www/html
 
-if ! gosu www-data php bin/console.php user search mail "$FRIENDICA_ADMIN_MAIL" 2>/dev/null | grep -Fq "$FRIENDICA_ADMIN_MAIL"; then
+if ! gosu www-data php bin/console.php user search nick "$FRIENDICA_ADMIN_NICK" 2>/dev/null | grep -Fq "$FRIENDICA_ADMIN_NICK"; then
   gosu www-data php bin/console.php user add "Railway Admin" "$FRIENDICA_ADMIN_NICK" "$FRIENDICA_ADMIN_MAIL" en "${FRIENDICA_URL%/}/images/friendica-256.png"
 fi
 gosu www-data php bin/console.php user password "$FRIENDICA_ADMIN_NICK" "$FRIENDICA_ADMIN_PASSWORD"
@@ -28,6 +28,9 @@ try {
 }
 PHP
 chown www-data:www-data healthz.php
+
+rm -f /etc/apache2/mods-enabled/mpm_*.load /etc/apache2/mods-enabled/mpm_*.conf
+a2enmod mpm_prefork >/dev/null
 
 host=${FRIENDICA_URL#*://}
 host=${host%%/*}
