@@ -1,5 +1,7 @@
 # Friendica on Railway
 
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/friendica?referralCode=ZqgrJ0)
+
 Deploy Friendica 2026.05 with generated administrator and MariaDB credentials, a built-in worker daemon, federation endpoints, and daily backups.
 
 The Deploy on Railway button is added after the published route is verified.
