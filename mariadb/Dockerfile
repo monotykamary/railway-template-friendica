@@ -1,0 +1,2 @@
+FROM docker.io/library/mariadb:11.8.5@sha256:3a730f41f00d261df28a0bc1bc2845f9c0901c2e2f05e5005c7713cc43ebc1fe
+EXPOSE 3306
