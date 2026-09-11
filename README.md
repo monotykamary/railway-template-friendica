@@ -9,7 +9,7 @@ The Deploy on Railway button is added after the published route is verified.
 ## What this deploys
 
 - Friendica `2026.05-apache`, pinned to the official Linux/AMD64 image digest
-- MariaDB `11.8.5`, pinned by digest
+- MariaDB `11.8.9`, pinned by digest
 - Generated administrator and database credentials
 - Friendica's background daemon in the same single-replica container
 - Daily-backed-up Friendica and MariaDB volumes

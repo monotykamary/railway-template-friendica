@@ -17,7 +17,7 @@ Sign in with `FRIENDICA_ADMIN_NICK` and the generated `FRIENDICA_ADMIN_PASSWORD`
 ### Deployment Dependencies
 
 - Friendica Apache service with a daily-backed-up application volume
-- Private MariaDB 11.8.5 with daily backups
+- Private MariaDB 11.8.9 with daily backups
 - Optional external SMTP and Redis services
 
 ### Implementation Details
